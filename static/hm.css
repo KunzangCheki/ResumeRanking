@@ -135,6 +135,27 @@ header p {
     font-size: 1.1rem;
 }
 
+.clear-btn {
+    background-color: #f8f9fa;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.clear-btn i {
+    margin-right: 5px;
+}
+
 .upload-section {
     background-color: white;
     border-radius: var(--border-radius);

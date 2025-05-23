@@ -38,6 +38,41 @@ window.addEventListener('click', (e) => {
     }
 });
 
+document.getElementById('clearBtn').addEventListener('click', function() {
+    // Reset file input
+    document.getElementById('fileInput').value = '';
+    
+    // Hide progress bar
+    document.getElementById('progressContainer').style.display = 'none';
+    
+    // Disable rank button
+    document.getElementById('rankBtn').disabled = true;
+    
+    // Clear search
+    document.getElementById('searchInput').value = '';
+    
+    // Clear results table
+    document.getElementById('resultsBody').innerHTML = '';
+    
+    // Show "no results" message
+    document.getElementById('noResults').style.display = 'block';
+    
+    // Visual feedback
+    const clearBtn = document.getElementById('clearBtn');
+    clearBtn.innerHTML = '<i class="fas fa-check"></i> Cleared!';
+    clearBtn.style.backgroundColor = '#28a745';
+    clearBtn.style.borderColor = '#28a745';
+    clearBtn.style.color = 'white';
+    
+    // Reset button after 2 seconds
+    setTimeout(() => {
+        clearBtn.innerHTML = '<i class="fas fa-times-circle"></i> Clear';
+        clearBtn.style.backgroundColor = '#f8f9fa';
+        clearBtn.style.borderColor = '#dc3545';
+        clearBtn.style.color = '#dc3545';
+    }, 2000);
+});
+
 function handleDragOver(e) {
     e.preventDefault();
     e.stopPropagation();
