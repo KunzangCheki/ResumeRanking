@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - SkillRank</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <header class="auth-header">
+            <a href="" class="logo">Skill<span>Rank</span></a>
+        </header>
+
+        <main class="auth-main">
+            <div class="auth-card">
+                <h1>Welcome Back</h1>
+                <p>Sign in to access your SkillRank account</p>
+                
+                <form id="signinForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="forgot-password">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Redirect to /home on form submit
+        document.getElementById("signinForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent actual submission
+            window.location.href = "/index"; // Navigate to home
+        });
+    </script>
+</body>
+</html>
